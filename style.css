@@ -11,11 +11,15 @@ body {
 .left-container {
     display: inline-block;
     position: relative;
-    width: 50%;
+    width: 60%;
 }
 
-.background-img {
+.left-container > img{
+    top: 0;
+    left: 0;
+    height: 100%;
     width: 100%;
+    object-fit: contain;
     display: block;
 }
 
@@ -24,15 +28,16 @@ body {
     justify-content: center;
     align-items: center;
     float: left;
+    height: 6rem;
     position: absolute;
     top: 30%;
     color: white;
     width: 100%;
-    background-color: #33333363;
+    background-color: #333333b7;
 }
 
 .logo {
-    height: 7rem;
+    height: 5rem;
 }
 
 @font-face {
@@ -42,7 +47,7 @@ body {
 
 h1 {
     font-family: norse;
-    font-size: 7rem;
+    font-size: 5rem;
 }
 
 .main-container {
@@ -66,4 +71,44 @@ fieldset {
     margin-right: 8rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+
+.input-row {
+    display: flex;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+}
+
+button {
+    width: 12rem;
+    height: 3rem;
+    border-radius: 0.6rem;
+    margin: 1rem;
+    margin-left: 0;
+    background-color: rgb(89, 109, 72);
+    color: rgb(255, 255, 255);
+    font: 1rem sans-serif;
+    font-weight: 700;
+}
+
+button:hover {
+    background-color: rgb(66, 83, 51);
+}
+
+button:active {
+    background-color: rgb(53, 68, 39);
+    box-shadow: inset;
+}
+
+input:user-invalid {
+    outline: red solid 2px;
+}
+
+label {
+    font-size: 0.8rem;
+    font-family: 'Inter';
+}
+
+#password + p {
+    content: 'Password has to contain at least 1 lowercase letter, 1 Uppercase, 1 number, 1 special character, be min 8 characters long'
 }

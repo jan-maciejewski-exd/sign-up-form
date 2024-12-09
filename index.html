@@ -19,36 +19,45 @@
         <form>
             <legend>Let's do this!</legend>
             <fieldset>
-                <div class="input-div">
-                    <label for="fname">First Name</label>
-                    <input type="text" id="fname" name="user-fname">
+                <div class="input-row">
+                    <div class="input-div">
+                        <label for="fname">FIRST NAME</label>
+                        <input type="text" id="fname" name="user-fname" required placeholder="Name">
+                    </div>
+                    <div class="input-div">
+                        <label for="lname">LAST NAME</label>
+                        <input type="text" id="lname" name="user-lname" required placeholder="Surname">
+                    </div>
                 </div>
-                <div class="input-div">
-                    <label for="lname">Last Name</label>
-                    <input type="text" id="lname" name="user-lname">
-                </div>
-                <div class="input-div">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="user-email">
-                </div>
-                <div class="input-div">    
-                    <label for="phone">Telephone number</label>
-                    <input type="tel" id="phone" name="user-phone">
-                </div>
-                <div class="input-div">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="user-password">
-                </div>
-                <div class="input-div">    
-                    <label for="confirm-password">Confirm Password</label>
-                    <input type="password" id="confirm-password" name="user-confirm-password">                                        
+                    <div class="input-row">
+                        <div class="input-div">
+                            <label for="email">EMAIL</label>
+                            <input type="email" id="email" name="user-email" required placeholder="example@example.com">
+                        </div>
+                        <div class="input-div">    
+                            <label for="phone">PHONE</label>
+                            <input type="tel" id="phone" name="user-phone" placeholder="000000000">
+                        </div>
+                    </div>
+                <div class="input-row">
+                    <div class="input-div">
+                        <label for="password">PASSWORD</label>
+                        <input type="password" id="password" name="user-password" required
+                        pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}" placeholder="Pa$$w0rd">
+                        <p></p>
+                    </div>
+                    <div class="input-div">    
+                        <label for="confirm-password">CONFIRM PASSWORD</label>
+                        <input type="password" id="confirm-password" name="user-confirm-password" required
+                        pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}" placeholder="Pa$$w0rd">                                        
+                    </div>
                 </div>
             </fieldset>
+            <div class="bottom-text">
+                <button type="submit">Create Account</button>
+                <p>Already have an account? <a>Log in</a></p>
+            </div>
         </form>
-        <div class="bottom-text">
-            <button>Create Account</button>
-            <p>Already have an account? <a>Log in</a></p>
-        </div>
     </div>
 </body>
 </html>
