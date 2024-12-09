@@ -1,5 +1,6 @@
 :root {
-    font: 1rem sans-serif;
+    font: 1rem;
+    font-family: 'Inter';
 }
 
 body {
@@ -12,15 +13,13 @@ body {
     display: inline-block;
     position: relative;
     width: 60%;
-}
+    background-image: url(./images/halie-west-25xggax4bSA-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 
-.left-container > img{
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
-    display: block;
+    flex-basis: 0 0 30%;
+    width: 40vw;
+    height: 100vh;
 }
 
 .logo-container {
@@ -106,8 +105,7 @@ input:user-invalid {
 
 label {
     font-size: 0.8rem;
-    font-family: 'Inter';
-}
+    }
 
 #password + p {
     content: 'Password has to contain at least 1 lowercase letter, 1 Uppercase, 1 number, 1 special character, be min 8 characters long'
